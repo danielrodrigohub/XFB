@@ -147,6 +147,22 @@ else
     print_warning "macdeployqt not found. The app may require Qt to be installed on target systems."
 fi
 
+# Sign the application
+print_status "Signing application with entitlements..."
+if [ -f "XFB.entitlements" ]; then
+    codesign --deep --force --options runtime --entitlements "XFB.entitlements" --sign - "$APP_NAME"
+    if [ $? -eq 0 ]; then
+        print_success "Application signed successfully!"
+    else
+        print_error "Code signing failed!"
+        exit 1
+    fi
+else
+    print_warning "XFB.entitlements not found! Application may crash on Apple Silicon."
+    print_status "Attempting basic ad-hoc signing..."
+    codesign --deep --force --options runtime --sign - "$APP_NAME"
+fi
+
 # Create DMG
 print_status "Creating DMG package..."
 

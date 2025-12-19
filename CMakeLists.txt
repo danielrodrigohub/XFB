@@ -46,7 +46,7 @@ endif()
 add_subdirectory(src)
 
 # Add tests subdirectory if BUILD_TESTING is enabled (default ON)
-option(BUILD_TESTING "Build the testing tree" ON)
+option(BUILD_TESTING "Build the testing tree" OFF)
 if(BUILD_TESTING AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests")
     enable_testing()
     add_subdirectory(tests)

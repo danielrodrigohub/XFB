@@ -1,0 +1,7 @@
+[  0%] Built target XFB_autogen_timestamp_deps
+[  1%] Automatic MOC and UIC for target XFB
+AutoUic: /Users/danielrodrigovegavega/XFB/src/player.ui: Warning: Buddy assignment: '' is not a valid widget.
+[  1%] Built target XFB_autogen
+[  3%] Building CXX object src/CMakeFiles/XFB.dir/player.cpp.o
+[  5%] Linking CXX executable ../bin/XFB.app/Contents/MacOS/XFB
+[100%] Built target XFB

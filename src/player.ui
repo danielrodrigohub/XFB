@@ -1297,451 +1297,388 @@
          <property name="frameShadow">
           <enum>QFrame::Shadow::Raised</enum>
          </property>
-         <widget class="QPushButton" name="btPlay">
-          <property name="geometry">
-           <rect>
-            <x>9</x>
-            <y>10</y>
-            <width>221</width>
-            <height>55</height>
-           </rect>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>30</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>55</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Play</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/flat/Play-64.png</normaloff>:/icons/flat/Play-64.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="btStop">
-          <property name="geometry">
-           <rect>
-            <x>239</x>
-            <y>40</y>
-            <width>171</width>
-            <height>25</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Stop</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/flat/Stop Sign-32.png</normaloff>:/icons/flat/Stop Sign-32.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="btPlayNext">
-          <property name="geometry">
-           <rect>
-            <x>239</x>
-            <y>10</y>
-            <width>171</width>
-            <height>25</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Play Next</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/flat/Fast Forward-32.png</normaloff>:/icons/flat/Fast Forward-32.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="bt_rec">
-          <property name="geometry">
-           <rect>
-            <x>420</x>
-            <y>40</y>
-            <width>161</width>
-            <height>25</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Record</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/flat/Record-32.png</normaloff>:/icons/flat/Record-32.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-         </widget>
-         <widget class="QLabel" name="txt_recTime">
-          <property name="geometry">
-           <rect>
-            <x>420</x>
-            <y>10</y>
-            <width>150</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <italic>false</italic>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="txtNowPlaying">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>90</y>
-            <width>1161</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <bold>true</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(124, 124, 186);border-radius:8px;</string>
-          </property>
-          <property name="text">
-           <string>XFB - OpenSource Radio Automation Software</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="txt_ProgramName">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>10</y>
-            <width>541</width>
-            <height>37</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <italic>true</italic>
-            <bold>true</bold>
-            <underline>false</underline>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:#FFE329;padding:5px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="bt_ProgramStopandProcess">
-          <property name="geometry">
-           <rect>
-            <x>750</x>
-            <y>10</y>
-            <width>301</width>
-            <height>34</height>
-           </rect>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>34</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Stop and process</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/googlemusicframe.png</normaloff>:/icons/googlemusicframe.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>24</width>
-            <height>24</height>
-           </size>
-          </property>
-         </widget>
-         <widget class="QLabel" name="txt_uploadingPrograms">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>0</y>
-            <width>541</width>
-            <height>51</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Noto Sans [monotype]</family>
-            <pointsize>20</pointsize>
-            <italic>true</italic>
-
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(255,255,255,.86);
-font: 75 italic 20pt &quot;Noto Sans [monotype]&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Uploading programs, plase wait...</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="txtDuration">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>45</y>
-            <width>581</width>
-            <height>25</height>
-           </rect>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>14</pointsize>
-            <italic>false</italic>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 75, 167);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>66</y>
-            <width>1041</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <item>
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>Volume</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSlider" name="sliderVolume">
-             <property name="value">
-              <number>99</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
-             </property>
-             <property name="tickInterval">
-              <number>1</number>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>Progress</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSlider" name="sliderProgress">
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QLabel" name="txt_creatingPrograms">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>0</y>
-            <width>541</width>
-            <height>51</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Noto Sans [monotype]</family>
-            <pointsize>20</pointsize>
-            <italic>true</italic>
-
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(255,255,255,.86);
-font: 75 italic 20pt &quot;Noto Sans [monotype]&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Creating programs, please wait...</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QLabel" name="led_rec">
-          <property name="geometry">
-           <rect>
-            <x>465</x>
-            <y>43</y>
-            <width>22</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 247, 0); border-radius:8px;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-         <widget class="QLabel" name="txt_loading">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>0</y>
-            <width>541</width>
-            <height>56</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Noto Sans [monotype]</family>
-            <pointsize>20</pointsize>
-            <italic>true</italic>
-
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color:rgba(255,255,255,.86);
-font: 75 italic 20pt &quot;Noto Sans [monotype]&quot;;</string>
-          </property>
-          <property name="text">
-           <string>loading...</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QToolButton" name="bt_pause_rec">
-          <property name="geometry">
-           <rect>
-            <x>550</x>
-            <y>42</y>
-            <width>25</width>
-            <height>19</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/flat/Pause-32.png</normaloff>:/icons/flat/Pause-32.png</iconset>
-          </property>
-         </widget>
-         <widget class="QToolButton" name="bt_pause_play">
-          <property name="geometry">
-           <rect>
-            <x>200</x>
-            <y>35</y>
-            <width>25</width>
-            <height>25</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/icons/flat/Pause-32.png</normaloff>:/icons/flat/Pause-32.png</iconset>
-          </property>
-         </widget>
-         <zorder>txt_ProgramName</zorder>
-         <zorder>btPlay</zorder>
-         <zorder>btStop</zorder>
-         <zorder>btPlayNext</zorder>
-         <zorder>txtNowPlaying</zorder>
-         <zorder>bt_ProgramStopandProcess</zorder>
-         <zorder>txtDuration</zorder>
-         <zorder>layoutWidget</zorder>
-         <zorder>txt_creatingPrograms</zorder>
-         <zorder>txt_loading</zorder>
-         <zorder>txt_uploadingPrograms</zorder>
-         <zorder>bt_pause_play</zorder>
-         <zorder>bt_rec</zorder>
-         <zorder>led_rec</zorder>
-         <zorder>txt_recTime</zorder>
-         <zorder>bt_pause_rec</zorder>
+         <layout class="QVBoxLayout" name="verticalLayout_main">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <property name="leftMargin">
+           <number>2</number>
+          </property>
+          <property name="topMargin">
+           <number>2</number>
+          </property>
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <property name="bottomMargin">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_controls_row">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="btPlay">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>220</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Play</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/flat/Play-64.png</normaloff>:/icons/flat/Play-64.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="bt_pause_play">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>55</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/icons/flat/Pause-32.png</normaloff>:/icons/flat/Pause-32.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_nav">
+              <property name="spacing">
+               <number>2</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btPlayNext">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Play Next</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources.qrc">
+                  <normaloff>:/icons/flat/Fast Forward-32.png</normaloff>:/icons/flat/Fast Forward-32.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_stops">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="btStop">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Stop</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/flat/Stop Sign-32.png</normaloff>:/icons/flat/Stop Sign-32.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="bt_stop_next">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Stop Next</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/flat/Stop Sign-32.png</normaloff>:/icons/flat/Stop Sign-32.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_rec">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="txt_recTime">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 0, 0);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_rec_btns">
+                <property name="spacing">
+                 <number>2</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="led_rec">
+                  <property name="fixedSize">
+                   <size>
+                    <width>22</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 247, 0); border-radius:8px;</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="bt_rec">
+                  <property name="text">
+                   <string>Record</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/flat/Record-32.png</normaloff>:/icons/flat/Record-32.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="bt_pause_rec">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/flat/Pause-32.png</normaloff>:/icons/flat/Pause-32.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_middle">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>10</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_info_group">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_prog_header">
+                <item>
+                 <widget class="QLabel" name="txt_ProgramName">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <italic>true</italic>
+                    <bold>true</bold>
+                    <underline>false</underline>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color:#FFE329;padding:5px;</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="bt_ProgramStopandProcess">
+                  <property name="text">
+                   <string>Stop and process</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/googlemusicframe.png</normaloff>:/icons/googlemusicframe.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="txtDuration">
+                 <property name="text"><string/></property>
+                 <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_sliders_row">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Volume</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="sliderVolume">
+              <property name="value">
+               <number>99</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="tickInterval">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Progress</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="sliderProgress">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="txtNowPlaying">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(124, 124, 186);border-radius:8px;</string>
+            </property>
+            <property name="text">
+             <string>XFB - OpenSource Radio Automation Software</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+             <widget class="QLabel" name="txt_loading">
+               <property name="text"><string>Loading...</string></property>
+               <property name="visible"><bool>false</bool></property>
+             </widget>
+          </item>
+          <item>
+             <widget class="QLabel" name="txt_creatingPrograms">
+               <property name="text"><string>Creating programs...</string></property>
+               <property name="visible"><bool>false</bool></property>
+             </widget>
+          </item>
+          <item>
+             <widget class="QLabel" name="txt_uploadingPrograms">
+                <property name="text"><string>Uploading programs...</string></property>
+                <property name="visible"><bool>false</bool></property>
+             </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item row="24" column="1">
@@ -1786,7 +1723,7 @@ font: 75 italic 20pt &quot;Noto Sans [monotype]&quot;;</string>
           <attribute name="label">
            <string>Search</string>
           </attribute>
-          <widget class="QWidget" name="layoutWidget">
+          <widget class="QWidget" name="widgetVolumeProgress">
            <property name="geometry">
             <rect>
              <x>10</x>

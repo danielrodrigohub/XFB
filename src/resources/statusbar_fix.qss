@@ -1,7 +1,9 @@
 /* Additional status bar styling to target specific cases that cause light stripes */
+/* Updated to match refined Dark Theme background #1e1e2e */
+
 QStatusBar {
-    background-color: #353535 !important;
-    color: #ffffff !important;
+    background-color: #1e1e2e !important;
+    color: #cdd6f4 !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -9,8 +11,8 @@ QStatusBar {
 
 /* Style all status bar elements and children */
 QStatusBar * {
-    background-color: #353535 !important;
-    color: #ffffff !important;
+    background-color: #1e1e2e !important;
+    color: #cdd6f4 !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -18,7 +20,7 @@ QStatusBar * {
 
 /* Style the size grip directly (which appears in the corner) */
 QMainWindow::corner {
-    background-color: #353535 !important;
+    background-color: #1e1e2e !important;
 }
 
 /* Target widgets that could be inserted automatically */
@@ -26,14 +28,14 @@ QStatusBar QToolButton,
 QStatusBar QPushButton,
 QStatusBar QLabel,
 QStatusBar QProgressBar {
-    background-color: #353535 !important;
-    color: #ffffff !important;
+    background-color: #1e1e2e !important;
+    color: #cdd6f4 !important;
     border: none !important;
 }
 
 /* Target potential frameless containers in status bar */
 QStatusBar QFrame {
-    background-color: #353535 !important;
+    background-color: #1e1e2e !important;
     border: none !important;
 }
 
@@ -41,7 +43,7 @@ QStatusBar QFrame {
 QStatusBar QHBoxLayout,
 QStatusBar QVBoxLayout,
 QStatusBar QGridLayout {
-    background-color: #353535 !important;
+    background-color: #1e1e2e !important;
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -50,15 +52,15 @@ QStatusBar QGridLayout {
 
 /* Ensure consistent text coloring in status bar */
 QStatusBar QLabel {
-    color: #ffffff !important;
+    color: #cdd6f4 !important;
 }
 
 /* Additional corner fixes */
 QMainWindow::separator:hover {
-    background-color: #353535;
+    background-color: #1e1e2e;
 }
 
 /* Target all widgets at the bottom of the main window */
 QMainWindow > .QWidget:last {
-    background-color: #353535 !important;
+    background-color: #1e1e2e !important;
 }

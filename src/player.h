@@ -4,49 +4,47 @@
 #include <QMainWindow>
 #include <QtMultimedia/QMediaPlayer>
 // QMediaPlaylist replaced with QList<QUrl>
-#include <QtSql>
-#include <QtMultimedia/QMediaRecorder>
-#include <QUrl>
 #include <QByteArray>
 #include <QComboBox>
+#include <QFrame>
+#include <QLabel>
 #include <QMainWindow>
+#include <QMediaFormat>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 #include <QObject>
 #include <QPixmap>
 #include <QPushButton>
 #include <QSlider>
-#include <QWidget>
-#include <QTime>
-#include <QNetworkReply>
-#include <QNetworkAccessManager>
 #include <QTableView>
+#include <QTime>
 #include <QUrl>
-#include <QLabel>
-#include <QFrame>
+#include <QWidget>
+#include <QtMultimedia/QMediaRecorder>
 #include <QtQuickWidgets/QQuickWidget>
+#include <QtSql>
 #include <QtWebEngineQuick/QtWebEngineQuick>
-#include <QMediaFormat>
 // Qt6 multimedia includes
+#include <QMediaCaptureSession>
+#include <QtMultimedia/QAudioInput>
 #include <QtMultimedia/QAudioOutput>
 #include <QtMultimedia/QMediaDevices>
-#include <QtMultimedia/QAudioInput>
-#include <QMediaCaptureSession>
 
 namespace Ui {
 class player;
 }
 
-class player : public QMainWindow
-{
+class player : public QMainWindow {
     Q_OBJECT
     friend class PlayerUIController;
 
-public:
-    explicit player(QWidget *parent = 0);
+  public:
+    explicit player(QWidget* parent = 0);
     ~player();
     int onAbout2Finish;
     QSqlDatabase adb;
     QString saveFile;
-    QTimer *recTimer = nullptr; // Will be initialized in constructor
+    QTimer* recTimer = nullptr; // Will be initialized in constructor
     int recSecs;
     int recMins;
     int recHours;
@@ -55,11 +53,11 @@ public:
     int lp1_total_time_int;
     QString lp2_total_time;
     int lp2_total_time_int;
-    QTimer *stimer = new QTimer(this);
-    QTimer *icetimer = new QTimer(this);
-    QTimer *butt_timer = new QTimer(this);
-    QTimer *adRefreshTimer = new QTimer(this);
-    
+    QTimer* stimer = new QTimer(this);
+    QTimer* icetimer = new QTimer(this);
+    QTimer* butt_timer = new QTimer(this);
+    QTimer* adRefreshTimer = new QTimer(this);
+
     // UI accessor methods for controllers
     QTableView* getMusicView() const;
     QPushButton* getPlayButton() const;
@@ -68,13 +66,13 @@ public:
     QSlider* getVolumeSlider() const;
     int jingleCadaNumMusicas;
 
-public slots:
+  public slots:
     bool checkDbOpen();
     void update_music_table();
     void checkForUpdates();
     void refreshAdBanner(); // New slot to refresh the ad banner
 
-private slots:
+  private slots:
     void on_actionOpen_triggered();
     void on_btPlay_clicked();
     void on_sliderProgress_sliderMoved(int position);
@@ -83,19 +81,19 @@ private slots:
     // Update these method signatures to work with Qt6
     void onPositionChanged(qint64 position);
     void durationChanged(qint64 position);
-    void currentMediaChanged(const QUrl &content); // Changed from QMediaContent
+    void currentMediaChanged(const QUrl& content); // Changed from QMediaContent
     void volumeChanged(int volume);
     void lp1_onPositionChanged(qint64 position);
     void lp1_durationChanged(qint64 position);
-    void lp1_currentMediaChanged(const QUrl &content); // Changed from QMediaContent
+    void lp1_currentMediaChanged(const QUrl& content); // Changed from QMediaContent
     void lp1_volumeChanged(int volume);
     void lp2_onPositionChanged(qint64 position);
     void lp2_durationChanged(qint64 position);
-    void lp2_currentMediaChanged(const QUrl &content); // Changed from QMediaContent
+    void lp2_currentMediaChanged(const QUrl& content); // Changed from QMediaContent
     void lp2_volumeChanged(int volume);
 
     // Add new methods for playlist management
-    void playNextMedia(); // New method to handle playlist progression
+    void playNextMedia();     // New method to handle playlist progression
     void playPreviousMedia(); // New method to handle playlist progression
     void playlistAboutToFinish();
     void playNextSong();
@@ -105,12 +103,12 @@ private slots:
     void jinglesViewContextMenu(const QPoint&);
     void pubViewContextMenu(const QPoint&);
     void programsViewContextMenu(const QPoint&);
-    void dropEvent(QDropEvent *);
-    void dragEnterEvent(QDragEnterEvent *);
-    void on_musicView_pressed(const QModelIndex &index);
-    void on_jinglesView_pressed(const QModelIndex &index);
-    void on_pubView_pressed(const QModelIndex &index);
-    void on_programsView_pressed(const QModelIndex &index);
+    void dropEvent(QDropEvent*);
+    void dragEnterEvent(QDragEnterEvent*);
+    void on_musicView_pressed(const QModelIndex& index);
+    void on_jinglesView_pressed(const QModelIndex& index);
+    void on_pubView_pressed(const QModelIndex& index);
+    void on_programsView_pressed(const QModelIndex& index);
     void autoModeGetMoreSongs();
     void on_bt_autoMode_clicked();
     void on_actionAdd_a_single_song_triggered();
@@ -152,7 +150,8 @@ private slots:
     void RecT2();
     void RecT1();
     void RecCHK();
-    void on_actionCheck_Database_Data_and_DELETE_all_invalid_records_witouth_confirmation_triggered();
+    void
+    on_actionCheck_Database_Data_and_DELETE_all_invalid_records_witouth_confirmation_triggered();
     void on_bt_rol_streaming_play_clicked();
     void on_bt_rol_streaming_stop_clicked();
     void on_lp_1_bt_play_clicked();
@@ -162,7 +161,8 @@ private slots:
     void on_lp_1_bt_pause_clicked();
     void on_lp_2_bt_pause_clicked();
     void on_bt_sndconv_clicked();
-    void on_actionAutoTrim_the_silence_from_the_start_and_the_end_of_all_music_tracks_in_the_database_triggered();
+    void
+    on_actionAutoTrim_the_silence_from_the_start_and_the_end_of_all_music_tracks_in_the_database_triggered();
     void on_actionUpdate_System_triggered();
     void on_bt_apply_multi_selection_clicked();
     void on_actionConvert_all_musics_in_the_database_to_mp3_triggered();
@@ -203,43 +203,47 @@ private slots:
     void stopMplayer();
     void monitorTakeOver();
     void on_bt_pause_rec_clicked();
-    void deleteFilesByPattern(const QString &dirPath, const QString &pattern);
+    void deleteFilesByPattern(const QString& dirPath, const QString& pattern);
     void on_bt_pause_play_clicked();
     void triggerPingFailureActions();
-    bool killProcessByName(const QString &processName);
-    
+    bool killProcessByName(const QString& processName);
+
     // Accessibility initialization
     void initializeAccessibility();
-private:
-    Ui::player *ui;
-    QMediaPlayer *Xplayer;
-    QList<QUrl> XplaylistUrls;  // Store URLs instead of using QMediaPlaylist
-    int XplaylistIndex = 0;     // Track current index
 
-    QMediaPlayer *lp1_Xplayer;
-    QList<QUrl> lp1_XplaylistUrls;  // Store URLs for LP1
-    int lp1_XplaylistIndex = 0;     // Track current index
+  private:
+    Ui::player* ui;
+    QMediaPlayer* Xplayer;
+    QList<QUrl> XplaylistUrls; // Store URLs instead of using QMediaPlaylist
+    int XplaylistIndex = 0;    // Track current index
 
-    QMediaPlayer *lp2_Xplayer;
-    QList<QUrl> lp2_XplaylistUrls;  // Store URLs for LP2
-    int lp2_XplaylistIndex = 0;     // Track current index
+    QMediaPlayer* lp1_Xplayer;
+    QList<QUrl> lp1_XplaylistUrls; // Store URLs for LP1
+    int lp1_XplaylistIndex = 0;    // Track current index
 
-    QAudioOutput *XplayerOutput;
-    QAudioOutput *lp1_XplayerOutput;
-    QAudioOutput *lp2_XplayerOutput;
+    QMediaPlayer* lp2_Xplayer;
+    QList<QUrl> lp2_XplaylistUrls; // Store URLs for LP2
+    int lp2_XplaylistIndex = 0;    // Track current index
+
+    QAudioOutput* XplayerOutput;
+    QAudioOutput* lp1_XplayerOutput;
+    QAudioOutput* lp2_XplayerOutput;
 
     // Media recording components
-    QMediaCaptureSession *captureSession;
-    QMediaRecorder *audioRecorder;
-    QAudioInput *audioInput;
+    QMediaCaptureSession* captureSession;
+    QMediaRecorder* audioRecorder;
+    QAudioInput* audioInput;
 
     // Google Ads banner webview
-    QQuickWidget *adBanner;
+    QQuickWidget* adBanner;
 
     int indexcanal;
     qint64 trackTotalDuration;
-    int autoMode,recMode,indexJust3rdDropEvt,lastTrackPercentage,Port,tmpFullScreen;
-    QString aExtencaoDesteCoiso, txt_selected_db, ask_normalize_new_files,estevalor,xaction,text,txtDuration,lastPlayedSong,Role,recDevice,SavePath,NomeDestePrograma,ProgramsPath,MusicPath,JinglePath,Server_URL,User,Pass,destinationProgram,FTPPath,TakeOverPath,PlayMode,genrehour,ComHour,codec,contentamento;
+    int autoMode, recMode, indexJust3rdDropEvt, lastTrackPercentage, Port, tmpFullScreen;
+    QString aExtencaoDesteCoiso, txt_selected_db, ask_normalize_new_files, estevalor, xaction, text,
+        txtDuration, lastPlayedSong, Role, recDevice, SavePath, NomeDestePrograma, ProgramsPath,
+        MusicPath, JinglePath, Server_URL, User, Pass, destinationProgram, FTPPath, TakeOverPath,
+        PlayMode, genrehour, ComHour, codec, contentamento;
     QMediaPlayer RadioPlayer;
     QProcess radio1;
     QMovie* movie;
@@ -265,14 +269,24 @@ private:
     QString recDeviceDesc;
     QMediaFormat::AudioCodec recCodec = QMediaFormat::AudioCodec::Unspecified;
     QMediaFormat::FileFormat recContainer = QMediaFormat::FileFormat();
-    QNetworkAccessManager *networkManager;
-    void launchExternalApplication(const QString &appName, const QString &filePath);
-    void getMediaInfoForFile(const QString &filePath);
-    void runServerCheckScript(const QString &scriptName, const QString &fileToCheck, const QString &successMessage, const QString &failureMessage);
-    void runServerUploadScript(const QString &scriptName, const QString &fileToUpload, const QString &successMessage, const QString &failureMessage, std::function<void (bool)> callback);
-    void getDurationForFile(const QString &filePath, std::function<void (const QString &, const QString &)> callback);
+    QNetworkAccessManager* networkManager;
+    void launchExternalApplication(const QString& appName, const QString& filePath);
+    void getMediaInfoForFile(const QString& filePath);
+    void runServerCheckScript(const QString& scriptName, const QString& fileToCheck,
+                              const QString& successMessage, const QString& failureMessage);
+    void runServerUploadScript(const QString& scriptName, const QString& fileToUpload,
+                               const QString& successMessage, const QString& failureMessage,
+                               std::function<void(bool)> callback);
+    void getDurationForFile(const QString& filePath,
+                            std::function<void(const QString&, const QString&)> callback);
+
+  private: // New vars for UI logic
+    bool isDraggingProgress = false;
+
+  private slots: // New slots for improved UI interaction
+    void on_sliderProgress_sliderPressed();
+    void on_sliderProgress_sliderReleased();
+    void on_bt_stop_next_clicked();
 };
-
-
 
 #endif // PLAYER_H

@@ -151,40 +151,40 @@ int main(int argc, char *argv[])
     QString qssFilePath;
     if (darkMode) {
         QPalette darkPalette;
-        // Setup darkPalette colors... (same as your original code)
-        darkPalette.setColor(QPalette::Window, QColor(53,53,53));
-        darkPalette.setColor(QPalette::WindowText, Qt::white);
-        darkPalette.setColor(QPalette::Base, QColor(42,42,42));
-        darkPalette.setColor(QPalette::AlternateBase, QColor(66,66,66));
-        darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
-        darkPalette.setColor(QPalette::ToolTipText, Qt::white);
-        darkPalette.setColor(QPalette::Text, Qt::white);
-        darkPalette.setColor(QPalette::Button, QColor(53,53,53));
-        darkPalette.setColor(QPalette::ButtonText, Qt::white);
+        // Modern Dark Palette (Catppuccin Mocha inspired)
+        darkPalette.setColor(QPalette::Window, QColor(30, 30, 46));        // #1e1e2e
+        darkPalette.setColor(QPalette::WindowText, QColor(205, 214, 244)); // #cdd6f4
+        darkPalette.setColor(QPalette::Base, QColor(24, 24, 37));          // #181825
+        darkPalette.setColor(QPalette::AlternateBase, QColor(30, 30, 46)); // #1e1e2e
+        darkPalette.setColor(QPalette::ToolTipBase, QColor(205, 214, 244));
+        darkPalette.setColor(QPalette::ToolTipText, QColor(30, 30, 46));
+        darkPalette.setColor(QPalette::Text, QColor(205, 214, 244));
+        darkPalette.setColor(QPalette::Button, QColor(49, 50, 68));        // #313244
+        darkPalette.setColor(QPalette::ButtonText, QColor(205, 214, 244));
         darkPalette.setColor(QPalette::BrightText, Qt::red);
-        darkPalette.setColor(QPalette::Highlight, QColor(129,129,194));
-        darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+        darkPalette.setColor(QPalette::Highlight, QColor(137, 180, 250));  // #89b4fa
+        darkPalette.setColor(QPalette::HighlightedText, QColor(30, 30, 46));
         a.setPalette(darkPalette);
         qssFilePath = ":/resources/darkstylesheet.qss";
-        qDebug() << "Set dark palette.";
+        qDebug() << "Set modern dark palette.";
     } else {
         QPalette lightPalette;
-        // Setup lightPalette colors... (same as your original code)
-        lightPalette.setColor(QPalette::Window, QColor(255,255,255));
-        lightPalette.setColor(QPalette::WindowText, Qt::black);
-        lightPalette.setColor(QPalette::Base, QColor(245,245,245));
-        lightPalette.setColor(QPalette::AlternateBase, QColor(232,232,232));
-        lightPalette.setColor(QPalette::ToolTipBase, Qt::black);
-        lightPalette.setColor(QPalette::ToolTipText, Qt::white);
-        lightPalette.setColor(QPalette::Text, Qt::black);
-        lightPalette.setColor(QPalette::Button, QColor(240,240,240));
-        lightPalette.setColor(QPalette::ButtonText, Qt::black);
+        // Modern Light Palette (Catppuccin Latte inspired)
+        lightPalette.setColor(QPalette::Window, QColor(239, 241, 245));    // #eff1f5
+        lightPalette.setColor(QPalette::WindowText, QColor(76, 79, 105));  // #4c4f69
+        lightPalette.setColor(QPalette::Base, QColor(255, 255, 255));      // #ffffff
+        lightPalette.setColor(QPalette::AlternateBase, QColor(239, 241, 245));
+        lightPalette.setColor(QPalette::ToolTipBase, QColor(76, 79, 105));
+        lightPalette.setColor(QPalette::ToolTipText, QColor(255, 255, 255));
+        lightPalette.setColor(QPalette::Text, QColor(76, 79, 105));
+        lightPalette.setColor(QPalette::Button, QColor(230, 233, 239));    // #e6e9ef
+        lightPalette.setColor(QPalette::ButtonText, QColor(76, 79, 105));
         lightPalette.setColor(QPalette::BrightText, Qt::red);
-        lightPalette.setColor(QPalette::Highlight, QColor(129,129,194));
-        lightPalette.setColor(QPalette::HighlightedText, Qt::white);
+        lightPalette.setColor(QPalette::Highlight, QColor(30, 102, 245));  // #1e66f5
+        lightPalette.setColor(QPalette::HighlightedText, QColor(255, 255, 255));
         a.setPalette(lightPalette);
         qssFilePath = ":/resources/stylesheet.qss";
-        qDebug() << "Set light palette.";
+        qDebug() << "Set modern light palette.";
     }
 
     // Load and apply the main stylesheet
